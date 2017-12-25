@@ -16,6 +16,7 @@
 		846628B71FEBCE9900384B55 /* GoogleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846628B61FEBCE9900384B55 /* GoogleTableViewCell.swift */; };
 		846628BB1FEBD66C00384B55 /* GoogleImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846628BA1FEBD66C00384B55 /* GoogleImageDetailViewController.swift */; };
 		846628BD1FEBDDA500384B55 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846628BC1FEBDDA500384B55 /* APIManager.swift */; };
+		848BF1471FF0C33E00CB6083 /* ImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BF1461FF0C33E00CB6083 /* ImagesResponse.swift */; };
 		AC234ECDFD3796DDA9B32514 /* Pods_GoogleAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03EF50F0AC01F9FC5503A0F /* Pods_GoogleAPIClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		846628BA1FEBD66C00384B55 /* GoogleImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleImageDetailViewController.swift; sourceTree = "<group>"; };
 		846628BC1FEBDDA500384B55 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		848BF1441FF0BEA000CB6083 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		848BF1461FF0C33E00CB6083 /* ImagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesResponse.swift; sourceTree = "<group>"; };
 		89EABB6051E9DD310523E72E /* Pods-GoogleAPIClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleAPIClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleAPIClient/Pods-GoogleAPIClient.debug.xcconfig"; sourceTree = "<group>"; };
 		D03EF50F0AC01F9FC5503A0F /* Pods_GoogleAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +81,7 @@
 		846628A11FEBCC4A00384B55 /* GoogleAPIClient */ = {
 			isa = PBXGroup;
 			children = (
+				848BF1451FF0C2EB00CB6083 /* Models */,
 				846628A21FEBCC4A00384B55 /* AppDelegate.swift */,
 				846628BC1FEBDDA500384B55 /* APIManager.swift */,
 				845EF27D1FECFF69005112F1 /* GoogleService.swift */,
@@ -100,6 +103,14 @@
 				848BF1441FF0BEA000CB6083 /* .gitignore */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		848BF1451FF0C2EB00CB6083 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				848BF1461FF0C33E00CB6083 /* ImagesResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		95F0DB2AC7968C8FE8D38A6E /* Frameworks */ = {
@@ -207,10 +218,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GoogleAPIClient/Pods-GoogleAPIClient-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -242,6 +257,7 @@
 				846628B51FEBCE6A00384B55 /* GoogleTableViewController.swift in Sources */,
 				846628B71FEBCE9900384B55 /* GoogleTableViewCell.swift in Sources */,
 				845EF27E1FECFF69005112F1 /* GoogleService.swift in Sources */,
+				848BF1471FF0C33E00CB6083 /* ImagesResponse.swift in Sources */,
 				846628BD1FEBDDA500384B55 /* APIManager.swift in Sources */,
 				846628BB1FEBD66C00384B55 /* GoogleImageDetailViewController.swift in Sources */,
 				846628A31FEBCC4A00384B55 /* AppDelegate.swift in Sources */,

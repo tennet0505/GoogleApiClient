@@ -7,5 +7,5 @@
     use_frameworks!
     
     target 'GoogleAPIClient' do
-        pod 'Alamofire', '~> 4.5'
+        pod 'AlamofireObjectMapper'
 end
