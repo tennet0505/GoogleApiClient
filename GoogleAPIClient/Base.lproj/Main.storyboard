@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RnK-nO-YhG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Google Table View Controller-->
+        <scene sceneID="iUh-WN-N4H">
+            <objects>
+                <tableViewController id="qvX-4w-EfZ" customClass="GoogleTableViewController" customModule="GoogleAPIClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ihE-OE-CmS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="8LM-hR-oLj" customClass="GoogleTableViewCell" customModule="GoogleAPIClient" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8LM-hR-oLj" id="Fjs-4Q-3tI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5aw-WV-m6K">
+                                            <rect key="frame" x="38" y="4" width="48" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="DR5-D8-koE"/>
+                                                <constraint firstAttribute="width" secondItem="5aw-WV-m6K" secondAttribute="height" multiplier="1:1" id="I1d-tU-A8i"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSY-Oa-ooZ">
+                                            <rect key="frame" x="101" y="28.5" width="267" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="5aw-WV-m6K" firstAttribute="top" secondItem="Fjs-4Q-3tI" secondAttribute="top" constant="4" id="Ddb-sC-FCJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="SSY-Oa-ooZ" secondAttribute="bottom" constant="10" id="QbO-ZL-fWI"/>
+                                        <constraint firstItem="5aw-WV-m6K" firstAttribute="leading" secondItem="Fjs-4Q-3tI" secondAttribute="leading" constant="38" id="jsH-eK-3og"/>
+                                        <constraint firstAttribute="trailing" secondItem="SSY-Oa-ooZ" secondAttribute="trailing" constant="7" id="w4V-v0-SST"/>
+                                        <constraint firstItem="SSY-Oa-ooZ" firstAttribute="leading" secondItem="5aw-WV-m6K" secondAttribute="trailing" constant="15" id="yjo-Lz-nQW"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageLabel" destination="SSY-Oa-ooZ" id="MeI-D4-Aop"/>
+                                    <outlet property="imageView" destination="5aw-WV-m6K" id="qFZ-aA-o02"/>
+                                    <outlet property="thumbnailImageView" destination="5aw-WV-m6K" id="qgq-Ja-c43"/>
+                                    <segue destination="IXH-3l-uB3" kind="show" identifier="sequeID" id="AN5-IE-h5X"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qvX-4w-EfZ" id="Fm2-6G-rYY"/>
+                            <outlet property="delegate" destination="qvX-4w-EfZ" id="fxh-IA-neO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="yWq-MH-zAZ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3o-4E-Wcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839.20000000000005" y="30.134932533733135"/>
+        </scene>
+        <!--Google Image Detail View Controller-->
+        <scene sceneID="1xq-u8-Ubo">
+            <objects>
+                <viewController id="IXH-3l-uB3" customClass="GoogleImageDetailViewController" customModule="GoogleAPIClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T6Q-Ml-0Aj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WSG-YG-oVo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WSG-YG-oVo" firstAttribute="trailing" secondItem="C9J-Er-zb7" secondAttribute="trailing" id="79g-Mw-Wff"/>
+                            <constraint firstItem="WSG-YG-oVo" firstAttribute="bottom" secondItem="C9J-Er-zb7" secondAttribute="bottom" id="Gbc-D1-Whz"/>
+                            <constraint firstItem="WSG-YG-oVo" firstAttribute="leading" secondItem="C9J-Er-zb7" secondAttribute="leading" id="mOV-fl-60e"/>
+                            <constraint firstItem="WSG-YG-oVo" firstAttribute="top" secondItem="T6Q-Ml-0Aj" secondAttribute="top" id="rqk-vM-27b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C9J-Er-zb7"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="WSG-YG-oVo" id="bOE-1w-0mc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jl6-CM-FzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1632.8" y="29.23538230884558"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Xs-LU-MPf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RnK-nO-YhG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PAh-fs-Hqr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qvX-4w-EfZ" kind="relationship" relationship="rootViewController" id="C0v-89-FGj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1fL-ma-zYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="30"/>
+        </scene>
+    </scenes>
+</document>
