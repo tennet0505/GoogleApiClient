@@ -16,17 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let googleService = GooleService()
-        googleService.getImage(
-            successHandler: { items in
-                print(items)
-        },
-            errorHandler: { error in
-                print(error)
-        }
-        )
-        
-        print(" change for git test change for git test change for git test change for git test")
         
         return true
     }

@@ -13,8 +13,17 @@ class GoogleImageDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     var imageName = ""
     
-}
     
+    
+    func setupImage(item:Item?) {
+        if
+            let imageUrlString = item?.thumbnailLink,
+            let imageUrl = URL(string:imageUrlString){
+            imageView.af_setImage(withURL:imageUrl)
+        }
+
+}
+}
     
 //    override func viewDidLoad() {
 //        super.viewDidLoad()

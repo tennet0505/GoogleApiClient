@@ -12,25 +12,43 @@ import ObjectMapper
 import AlamofireObjectMapper
 
 class GooleService{
-    
-    let params = ["q":"cats",
-                  "alt": "json",
-                  "searchType": "image",
-                  "cx":"009539564186860760717:0ljwb3egsoe",
-                  "key":"AIzaSyAkmpHsyhnXp_ukaEQXtVY-a0aqAuq2cGE"]
 
+    
+//    var t = GoogleTableViewController()
+//
+//    func searchText() -> String {
+//
+//        var stringSearch = ""
+//        stringSearch = t.searhString
+//
+//        return stringSearch
+//
+//    }
  //   let baseURL = URL (string: "https://www.googleapis.com/customsearch/v1")
     
-    func getImage(
+    
+    
+    
+    func getImage ( q: String,
         successHandler :@escaping ([Item]?)->(),
-        errorHandler   :@escaping (Error)->()
-        ) -> Void  {
+        errorHandler   :@escaping (Error)->()     ) -> Void  {
+        
+        let params = ["q"  : q,
+                      "alt": "json",
+                      "searchType": "image",
+                      "cx" :"009539564186860760717:0ljwb3egsoe",
+                      "key":"AIzaSyAkmpHsyhnXp_ukaEQXtVY-a0aqAuq2cGE"]
+        
                 Alamofire
                     .request("https://www.googleapis.com/customsearch/v1", parameters: params)
                     .responseObject { (response: DataResponse<ImagesResponse>) in
                         switch response.result {
+                            
                         case .success:
                             successHandler(response.value?.items)
+                            
+                        
+                            
                         case .failure(let error):
                             errorHandler(error)
                         }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class GoogleTableViewCell: UITableViewCell {
 
@@ -15,17 +16,15 @@ class GoogleTableViewCell: UITableViewCell {
     @IBOutlet weak var imageLabel: UILabel!
     
     
-
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    func setup(item:Item?) {
+        imageLabel.text = item?.title
+        if
+            let imageUrlString = item?.thumbnailLink,
+            let imageUrl = URL(string:imageUrlString){
+            thumbnailImageView.af_setImage(withURL:imageUrl)
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
 }

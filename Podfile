@@ -8,4 +8,5 @@
     
     target 'GoogleAPIClient' do
         pod 'AlamofireObjectMapper'
+        pod 'AlamofireImage'
 end
