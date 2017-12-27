@@ -8,16 +8,18 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UISearchControllerDelegate{
 
  //  let images = ["1","2","3"]
  //   let labelImages = ["one","two","three"]
     
-    var searhString = "jackson"
+    var searhString = "dog"
     var itemsOfImage = [Item]()
     let googleService = GooleService()
     
+
     
 
     
@@ -30,9 +32,8 @@ class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UIS
 
         googleService.getImage(q: searhString,
                                successHandler: { ImagesResponse in
-                                
                                 self.itemsOfImage = ImagesResponse!
-                                        
+                                
                                         self.tableView.reloadData()
                                 
 
@@ -42,27 +43,10 @@ class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UIS
                                 print(Error)
         }
         )
-//            .getImage( q: searhString ,
-//
-//                       successHandler: { items in
-//
-//
-//
-//                        if let dict =  as!  [String: Any]? {
-//                                if let dict2 = dict["items"]{
-//                                    self.itemsOfImage = dict2 as? [AnyObject]
-//                                }
-//                            }
-//                        self.tableView.reloadData()
-//
-//            },
-//
-//
-//                       errorHandler: { error in
-//
-//                        print(error)
-//            }
-//        )
+
+    self.tableView.reloadData()
+        
+    
     }
     
 //    func search (){
@@ -94,8 +78,6 @@ class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UIS
                 .getImage( q: searchText,
                                    successHandler: {item in
                                     
-                              
-                                    
             },
                                    errorHandler: {e in
                                     
@@ -122,9 +104,6 @@ class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UIS
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         
-        
-        
-        
         return itemsOfImage.count
     }
 
@@ -148,13 +127,17 @@ class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UIS
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueID" {
+        if segue.identifier == "GoogleImageDetailViewController" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let dvc = segue.destination as! GoogleImageDetailViewController
+            
+             //   let url = URL(string: itemsOfImage[indexPath.row].contextLink!)
                 
-                
-                dvc.setupImage(item: itemsOfImage[indexPath.row])
+//                 let imageUrlString = URL (string: itemsOfImage[indexPath.row].contextLink!)
 
+                dvc.imageUrl = itemsOfImage[indexPath.row].contextLink!
+            
+                
             
             }
         }
@@ -163,4 +146,5 @@ class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UIS
     
 
 }
+
 

@@ -32,18 +32,27 @@ class Item: Mappable {
     }
     
     
-    
     //getters
     var thumbnailLink:String?{
         return image?.thumbnailLink
     }
+    
+    var contextLink:String?{
+        return image?.contextLink
+    }
+
 }
 
 class Image	: Mappable {
     var thumbnailLink:String?
+    var contextLink:String?
+    
     required init?(map: Map) { }
+
     func mapping(map: Map) {
        thumbnailLink <- map["thumbnailLink"]
+         contextLink <- map["contextLink"]
+        
     }
 }
 

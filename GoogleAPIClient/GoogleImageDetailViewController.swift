@@ -11,35 +11,39 @@ import UIKit
 class GoogleImageDetailViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    var imageName = ""
     
-    
-    
-    func setupImage(item:Item?) {
-        if
-            let imageUrlString = item?.thumbnailLink,
-            let imageUrl = URL(string:imageUrlString){
-            imageView.af_setImage(withURL:imageUrl)
+    var imageUrl = ""
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        if let imageURL = URL (string: imageUrl){
+
+            imageView.af_setImage(withURL: imageURL)
+            
+        } else {
+            imageView.image = UIImage(named:"Placeholder1")
         }
 
-}
-}
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        imageView.image = UIImage(named: imageName)
-//
-//
-//        // Do any additional setup after loading the view.
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//
 
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+
+//    func setupImage(item:Item?) {
+//        if
+//            let imageUrlString = item?.contextLink,
+//            let imageUrl = URL(string:imageUrlString){
+//            imageView.af_setImage(withURL:imageUrl)
+//        }
+//        
+//}
+}
    
     
     

@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,40 +24,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="8LM-hR-oLj" customClass="GoogleTableViewCell" customModule="GoogleAPIClient" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="76" id="8LM-hR-oLj" customClass="GoogleTableViewCell" customModule="GoogleAPIClient" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8LM-hR-oLj" id="Fjs-4Q-3tI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5aw-WV-m6K">
-                                            <rect key="frame" x="38" y="4" width="48" height="48"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="256" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="5aw-WV-m6K">
+                                            <rect key="frame" x="31" y="2" width="70" height="70"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="48" id="DR5-D8-koE"/>
-                                                <constraint firstAttribute="width" secondItem="5aw-WV-m6K" secondAttribute="height" multiplier="1:1" id="I1d-tU-A8i"/>
+                                                <constraint firstAttribute="width" constant="70" id="EdF-fl-8aY"/>
+                                                <constraint firstAttribute="height" constant="70" id="qqC-cu-L3s"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSY-Oa-ooZ">
-                                            <rect key="frame" x="101" y="37.5" width="267" height="12"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xM-Eu-s4R">
+                                            <rect key="frame" x="120" y="24" width="235" height="14"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="5aw-WV-m6K" firstAttribute="top" secondItem="Fjs-4Q-3tI" secondAttribute="top" constant="4" id="Ddb-sC-FCJ"/>
-                                        <constraint firstAttribute="bottom" secondItem="SSY-Oa-ooZ" secondAttribute="bottom" constant="10" id="QbO-ZL-fWI"/>
-                                        <constraint firstItem="5aw-WV-m6K" firstAttribute="leading" secondItem="Fjs-4Q-3tI" secondAttribute="leading" constant="38" id="jsH-eK-3og"/>
-                                        <constraint firstAttribute="trailing" secondItem="SSY-Oa-ooZ" secondAttribute="trailing" constant="7" id="w4V-v0-SST"/>
-                                        <constraint firstItem="SSY-Oa-ooZ" firstAttribute="leading" secondItem="5aw-WV-m6K" secondAttribute="trailing" constant="15" id="yjo-Lz-nQW"/>
+                                        <constraint firstItem="6xM-Eu-s4R" firstAttribute="top" secondItem="Fjs-4Q-3tI" secondAttribute="top" constant="24" id="51G-YX-3Wv"/>
+                                        <constraint firstItem="5aw-WV-m6K" firstAttribute="top" secondItem="Fjs-4Q-3tI" secondAttribute="top" constant="2" id="Cra-nv-Wtf"/>
+                                        <constraint firstItem="5aw-WV-m6K" firstAttribute="leading" secondItem="Fjs-4Q-3tI" secondAttribute="leading" constant="31" id="W2s-o1-A83"/>
+                                        <constraint firstItem="6xM-Eu-s4R" firstAttribute="leading" secondItem="Fjs-4Q-3tI" secondAttribute="leading" constant="120" id="oPY-Ms-gBl"/>
+                                        <constraint firstAttribute="trailing" secondItem="6xM-Eu-s4R" secondAttribute="trailing" constant="20" id="x2i-cj-u1N"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageLabel" destination="SSY-Oa-ooZ" id="MeI-D4-Aop"/>
+                                    <outlet property="imageLabel" destination="6xM-Eu-s4R" id="Oky-QK-PTE"/>
                                     <outlet property="imageView" destination="5aw-WV-m6K" id="qFZ-aA-o02"/>
                                     <outlet property="thumbnailImageView" destination="5aw-WV-m6K" id="qgq-Ja-c43"/>
-                                    <segue destination="IXH-3l-uB3" kind="show" identifier="sequeID" id="AN5-IE-h5X"/>
+                                    <segue destination="IXH-3l-uB3" kind="show" identifier="GoogleImageDetailViewController" id="AN5-IE-h5X"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

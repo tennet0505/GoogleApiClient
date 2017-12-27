@@ -41,7 +41,9 @@ class GooleService{
         
                 Alamofire
                     .request("https://www.googleapis.com/customsearch/v1", parameters: params)
-                    .responseObject { (response: DataResponse<ImagesResponse>) in
+                    .responseObject {
+                        (response: DataResponse<ImagesResponse>) in
+                        
                         switch response.result {
                             
                         case .success:
