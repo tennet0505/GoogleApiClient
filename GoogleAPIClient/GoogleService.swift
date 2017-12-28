@@ -12,21 +12,6 @@ import ObjectMapper
 import AlamofireObjectMapper
 
 class GooleService{
-
-    
-//    var t = GoogleTableViewController()
-//
-//    func searchText() -> String {
-//
-//        var stringSearch = ""
-//        stringSearch = t.searhString
-//
-//        return stringSearch
-//
-//    }
- //   let baseURL = URL (string: "https://www.googleapis.com/customsearch/v1")
-    
-    
     
     
     func getImage ( q: String,

@@ -51,7 +51,7 @@ class Image	: Mappable {
 
     func mapping(map: Map) {
        thumbnailLink <- map["thumbnailLink"]
-         contextLink <- map["contextLink"]
+         contextLink <- map["thumbnailLink"]
         
     }
 }

@@ -12,30 +12,24 @@ import AlamofireImage
 
 class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UISearchControllerDelegate{
 
- //  let images = ["1","2","3"]
- //   let labelImages = ["one","two","three"]
+ 
     
-    var searhString = "dog"
+    var searhString = ""
     var itemsOfImage = [Item]()
     let googleService = GooleService()
     
-
-    
-
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.tableFooterView = UIView(frame: CGRect.zero)
         
-        searchBar()
-
+        
+        
+        
+ 
         googleService.getImage(q: searhString,
                                successHandler: { ImagesResponse in
                                 self.itemsOfImage = ImagesResponse!
                                 
                                         self.tableView.reloadData()
-                                
 
             },
                                errorHandler: { Error in
@@ -48,46 +42,8 @@ class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UIS
         
     
     }
-    
-//    func search (){
-//        let searchController = UISearchController()
-//
-//        searchController.delegate = self
-//
-//        searchController.searchBar.delegate = self
-//
-//        searchController.hidesNavigationBarDuringPresentation = true
-//
-//        tableView.reloadData()
-//    }
+ 
    
-    
-    
-    func searchBar() {
-        
-        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
-        searchBar.delegate = self
-        tableView.tableHeaderView = searchBar
-        tableView.resignFirstResponder()
-        tableView.reloadData()
-    }
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText != ""{
-            searhString = searchText
-            googleService
-                .getImage( q: searchText,
-                                   successHandler: {item in
-                                    
-            },
-                                   errorHandler: {e in
-                                    
-            })
-        }
-        
-        self.tableView.reloadData()
-
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -126,15 +82,12 @@ class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UIS
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GoogleImageDetailViewController" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let dvc = segue.destination as! GoogleImageDetailViewController
             
-             //   let url = URL(string: itemsOfImage[indexPath.row].contextLink!)
-                
-//                 let imageUrlString = URL (string: itemsOfImage[indexPath.row].contextLink!)
-
+    
                 dvc.imageUrl = itemsOfImage[indexPath.row].contextLink!
             
                 

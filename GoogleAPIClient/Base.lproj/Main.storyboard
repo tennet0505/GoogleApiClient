@@ -15,6 +15,56 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="f1X-v8-bck">
+            <objects>
+                <viewController id="oBw-nR-evo" customClass="SearchViewController" customModule="GoogleAPIClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zf2-nB-TZR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBy-3n-CyM">
+                                <rect key="frame" x="20" y="121" width="335" height="69"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="BnK-z7-61h">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="22"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wP-XX-DEF">
+                                        <rect key="frame" x="143.5" y="39" width="48" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Search"/>
+                                        <connections>
+                                            <segue destination="qvX-4w-EfZ" kind="show" id="ztU-uG-FIe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstItem="BnK-z7-61h" firstAttribute="width" secondItem="dBy-3n-CyM" secondAttribute="width" id="xwQ-X9-8ha"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dBy-3n-CyM" firstAttribute="leading" secondItem="rYz-Rp-6XT" secondAttribute="leading" constant="20" id="2HO-9q-oIJ"/>
+                            <constraint firstItem="dBy-3n-CyM" firstAttribute="top" secondItem="rYz-Rp-6XT" secondAttribute="top" constant="57" id="Aew-fW-vv1"/>
+                            <constraint firstItem="rYz-Rp-6XT" firstAttribute="trailing" secondItem="dBy-3n-CyM" secondAttribute="trailing" constant="20" id="jxw-jX-FtG"/>
+                            <constraint firstItem="dBy-3n-CyM" firstAttribute="centerX" secondItem="zf2-nB-TZR" secondAttribute="centerX" id="lRl-at-SW5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rYz-Rp-6XT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="F2t-3a-ir3"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="BnK-z7-61h" id="PnD-38-Ol6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZi-SK-Qfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118" y="-2"/>
+        </scene>
         <!--Google Table View Controller-->
         <scene sceneID="iUh-WN-N4H">
             <objects>
@@ -70,7 +120,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3o-4E-Wcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839.20000000000005" y="30.134932533733135"/>
+            <point key="canvasLocation" x="922" y="-2"/>
         </scene>
         <!--Google Image Detail View Controller-->
         <scene sceneID="1xq-u8-Ubo">
@@ -80,7 +130,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WSG-YG-oVo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WSG-YG-oVo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
@@ -99,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jl6-CM-FzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1632.8" y="29.23538230884558"/>
+            <point key="canvasLocation" x="1738" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Xs-LU-MPf">
@@ -112,12 +162,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="qvX-4w-EfZ" kind="relationship" relationship="rootViewController" id="C0v-89-FGj"/>
+                        <segue destination="oBw-nR-evo" kind="relationship" relationship="rootViewController" id="dL0-Dp-61J"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fL-ma-zYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134" y="30"/>
+            <point key="canvasLocation" x="-644" y="-2"/>
         </scene>
     </scenes>
 </document>
