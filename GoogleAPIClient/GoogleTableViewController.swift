@@ -88,7 +88,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                 let dvc = segue.destination as! GoogleImageDetailViewController
             
     
-                dvc.imageUrl = itemsOfImage[indexPath.row].contextLink!
+                dvc.imageUrl = itemsOfImage[indexPath.row].link!
             
                 
             

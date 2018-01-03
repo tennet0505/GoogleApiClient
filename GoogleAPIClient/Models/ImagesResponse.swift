@@ -22,13 +22,15 @@ class ImagesResponse: Mappable {
 class Item: Mappable {
     var
     title:String?,
-    image:Image?
+    image:Image?,
+    link:String?
     
     
     required init?(map: Map) { }
     func mapping(map: Map) {
         title <- map["title"]
         image <- map["image"]
+        link <- map["link"]
     }
     
     
