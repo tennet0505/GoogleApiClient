@@ -85,8 +85,8 @@
 			children = (
 				848BF1451FF0C2EB00CB6083 /* Models */,
 				845EF27D1FECFF69005112F1 /* GoogleService.swift */,
-				84698C901FF3AEFA009F433C /* SearchViewController.swift */,
 				846628B41FEBCE6A00384B55 /* GoogleTableViewController.swift */,
+				84698C901FF3AEFA009F433C /* SearchViewController.swift */,
 				846628B61FEBCE9900384B55 /* GoogleTableViewCell.swift */,
 				846628BA1FEBD66C00384B55 /* GoogleImageDetailViewController.swift */,
 				846628BC1FEBDDA500384B55 /* APIManager.swift */,
@@ -224,6 +224,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/UIScrollView-InfiniteScroll/UIScrollView_InfiniteScroll.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -231,6 +232,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIScrollView_InfiniteScroll.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

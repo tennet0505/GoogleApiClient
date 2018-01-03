@@ -37,7 +37,7 @@
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Search"/>
                                         <connections>
-                                            <segue destination="qvX-4w-EfZ" kind="show" id="ztU-uG-FIe"/>
+                                            <segue destination="qvX-4w-EfZ" kind="show" id="Ep8-Ea-OLs"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -58,7 +58,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="F2t-3a-ir3"/>
                     <connections>
-                        <outlet property="searchTextField" destination="BnK-z7-61h" id="PnD-38-Ol6"/>
+                        <outlet property="searchTextField" destination="BnK-z7-61h" id="NkD-wd-RmB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pZi-SK-Qfm" userLabel="First Responder" sceneMemberID="firstResponder"/>

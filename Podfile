@@ -9,4 +9,5 @@
     target 'GoogleAPIClient' do
         pod 'AlamofireObjectMapper'
         pod 'AlamofireImage'
+        pod 'UIScrollView-InfiniteScroll', '~> 1.0.0'
 end

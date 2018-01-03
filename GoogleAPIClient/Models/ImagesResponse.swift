@@ -23,7 +23,10 @@ class Item: Mappable {
     var
     title:String?,
     image:Image?,
-    link:String?
+    link:String?,
+    startIndex:String?,
+    nextPage:Int?
+  
     
     
     required init?(map: Map) { }
@@ -31,6 +34,8 @@ class Item: Mappable {
         title <- map["title"]
         image <- map["image"]
         link <- map["link"]
+        startIndex <- map["startIndex"]
+        nextPage <- map["nextPage"]
     }
     
     
@@ -42,7 +47,19 @@ class Item: Mappable {
     var contextLink:String?{
         return image?.contextLink
     }
-
+    
+    
+    //for test
+    init(title:String,
+         link:String,
+         nextPage:Int) {
+        self.title = title
+        self.link = link
+        self.nextPage = nextPage
+        image = Image()
+        image?.contextLink = link
+        image?.thumbnailLink = link
+    }
 }
 
 class Image	: Mappable {
@@ -56,6 +73,10 @@ class Image	: Mappable {
          contextLink <- map["thumbnailLink"]
         
     }
+    
+    
+    //for test
+    init() { }
 }
 
 //class SampleResponse: Mappable {
