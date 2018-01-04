@@ -14,14 +14,15 @@ import UIScrollView_InfiniteScroll
 
 class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UISearchControllerDelegate{
     
-    
-    
+
     var searhString = ""
     var itemsOfImage = [Item]()
     let googleService = GooleService()
     var pageOf = 11
+
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         googleService.getImage(q: searhString,
@@ -37,29 +38,26 @@ class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UIS
                                 print(Error)
         }
         )
-
         self.tableView.reloadData()
-        
-        
+
+        // MARK InfifnityScroll
         self.tableView.addInfiniteScroll { (tableView) in
             
-            self.googleService.getImage(q: self.searhString, page: self.pageOf,
-                                   successHandler:  { ImagesResponse in
-                                    
-                                    self.itemsOfImage.append(contentsOf: ImagesResponse)
-                                    
-                                    self.pageOf = self.pageOf + 10
-
-                                    self.tableView.reloadData()
-                                    
-            },
-                                   errorHandler: { Error in
-                                    
-                                    print(Error)
-            }
-            )
+            self.loadMore()
+           
             self.tableView.finishInfiniteScroll()
         }
+        
+        
+        // MARK Pull to refresh
+        refreshControl = UIRefreshControl()
+        refreshControl?.tintColor = UIColor.lightGray
+        refreshControl?.backgroundColor = UIColor.darkGray
+        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        
+        refreshControl?.addTarget(self, action: #selector(pullToRefresh), for: UIControlEvents.valueChanged)
+        
+        tableView.addSubview(refreshControl!)
         
     }
     
@@ -87,14 +85,7 @@ class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UIS
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! GoogleTableViewCell
         
-        
-        
         cell.setup(item: itemsOfImage[indexPath.row])
-        
-        
-        //let model = itemsOfImage[indexPath.row]
-        
-        //   cell.imageLabel.text = model.title
         
         
         return cell
@@ -117,8 +108,47 @@ class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UIS
     }
     
     
+    //MARK load more data after scrolling
+    func loadMore() {
+        self.googleService.getImage(q: self.searhString, page: self.pageOf,
+                                    successHandler:  { ImagesResponse in
+                                        
+                                        self.itemsOfImage.append(contentsOf: ImagesResponse)
+                                        
+                                        self.pageOf = self.pageOf + 10
+                                        
+                                        self.tableView.reloadData()
+                                        
+        },
+                                    errorHandler: { Error in
+                                        
+                                        print(Error)
+        }
+        )
+       
+    }
+    @objc func pullToRefresh() {
+        googleService.getImage(q: searhString,
+                               page: self.pageOf,
+                               successHandler: { ImagesResponse in
+                                self.itemsOfImage = ImagesResponse
+                                
+                                self.pageOf = self.pageOf + 10
+                                
+                                self.refreshControl?.endRefreshing()
+
+                                self.tableView.reloadData()
+                                
+        },
+                               errorHandler: { Error in
+                                
+                                print(Error)
+        }
+        )
+             }
+
     
-    
+   
     
 }
 
