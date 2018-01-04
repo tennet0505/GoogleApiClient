@@ -15,7 +15,6 @@
 		846628B51FEBCE6A00384B55 /* GoogleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846628B41FEBCE6A00384B55 /* GoogleTableViewController.swift */; };
 		846628B71FEBCE9900384B55 /* GoogleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846628B61FEBCE9900384B55 /* GoogleTableViewCell.swift */; };
 		846628BB1FEBD66C00384B55 /* GoogleImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846628BA1FEBD66C00384B55 /* GoogleImageDetailViewController.swift */; };
-		846628BD1FEBDDA500384B55 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846628BC1FEBDDA500384B55 /* APIManager.swift */; };
 		84698C911FF3AEFA009F433C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84698C901FF3AEFA009F433C /* SearchViewController.swift */; };
 		848BF1471FF0C33E00CB6083 /* ImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BF1461FF0C33E00CB6083 /* ImagesResponse.swift */; };
 		AC234ECDFD3796DDA9B32514 /* Pods_GoogleAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03EF50F0AC01F9FC5503A0F /* Pods_GoogleAPIClient.framework */; };
@@ -33,7 +32,6 @@
 		846628B41FEBCE6A00384B55 /* GoogleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTableViewController.swift; sourceTree = "<group>"; };
 		846628B61FEBCE9900384B55 /* GoogleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTableViewCell.swift; sourceTree = "<group>"; };
 		846628BA1FEBD66C00384B55 /* GoogleImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleImageDetailViewController.swift; sourceTree = "<group>"; };
-		846628BC1FEBDDA500384B55 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		84698C901FF3AEFA009F433C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		848BF1441FF0BEA000CB6083 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		848BF1461FF0C33E00CB6083 /* ImagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesResponse.swift; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 				846628B41FEBCE6A00384B55 /* GoogleTableViewController.swift */,
 				846628B61FEBCE9900384B55 /* GoogleTableViewCell.swift */,
 				846628BA1FEBD66C00384B55 /* GoogleImageDetailViewController.swift */,
-				846628BC1FEBDDA500384B55 /* APIManager.swift */,
 				846628A21FEBCC4A00384B55 /* AppDelegate.swift */,
 				846628A61FEBCC4A00384B55 /* Main.storyboard */,
 				846628AB1FEBCC4A00384B55 /* LaunchScreen.storyboard */,
@@ -266,7 +263,6 @@
 				84698C911FF3AEFA009F433C /* SearchViewController.swift in Sources */,
 				845EF27E1FECFF69005112F1 /* GoogleService.swift in Sources */,
 				848BF1471FF0C33E00CB6083 /* ImagesResponse.swift in Sources */,
-				846628BD1FEBDDA500384B55 /* APIManager.swift in Sources */,
 				846628BB1FEBD66C00384B55 /* GoogleImageDetailViewController.swift in Sources */,
 				846628A31FEBCC4A00384B55 /* AppDelegate.swift in Sources */,
 			);
