@@ -85,8 +85,8 @@
 			children = (
 				848BF1451FF0C2EB00CB6083 /* Models */,
 				845EF27D1FECFF69005112F1 /* GoogleService.swift */,
-				846628B41FEBCE6A00384B55 /* GoogleTableViewController.swift */,
 				84698C901FF3AEFA009F433C /* SearchViewController.swift */,
+				846628B41FEBCE6A00384B55 /* GoogleTableViewController.swift */,
 				846628B61FEBCE9900384B55 /* GoogleTableViewCell.swift */,
 				846628BA1FEBD66C00384B55 /* GoogleImageDetailViewController.swift */,
 				846628BC1FEBDDA500384B55 /* APIManager.swift */,

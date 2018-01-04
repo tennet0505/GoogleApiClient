@@ -24,8 +24,8 @@ class GooleService{
                       "alt": "json",
                       "start": page,
                       "searchType": "image",
-                      "cx" :"009539564186860760717:unfxmsbnqzc",
-                      "key":"AIzaSyAlpwFUv_5Xa1gfT8Tn4YjR6yKBXoUpuGQ"] as [String : Any]
+                      "cx" :"009539564186860760717:1yl-cy-7db8",
+                      "key":"AIzaSyAwFVOEsnqHYOVCw9XpDHc8g9VYlgwJWlI"] as [String : Any]
                       
                       //"key":"AIzaSyAkmpHsyhnXp_ukaEQXtVY-a0aqAuq2cGE"] as [String : Any
         

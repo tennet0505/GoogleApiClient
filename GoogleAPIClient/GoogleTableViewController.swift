@@ -19,25 +19,25 @@ class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UIS
     var searhString = ""
     var itemsOfImage = [Item]()
     let googleService = GooleService()
-    var pageOf = 1
+    var pageOf = 11
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         googleService.getImage(q: searhString,
-                               page: pageOf,
+                               page: 1,
                                successHandler: { ImagesResponse in
                                 self.itemsOfImage = ImagesResponse
-                             
+
                                 self.tableView.reloadData()
-                                
+
         },
                                errorHandler: { Error in
-                                
+
                                 print(Error)
         }
         )
-        
+
         self.tableView.reloadData()
         
         
@@ -45,8 +45,7 @@ class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UIS
             
             self.googleService.getImage(q: self.searhString, page: self.pageOf,
                                    successHandler:  { ImagesResponse in
-                                
-
+                                    
                                     self.itemsOfImage.append(contentsOf: ImagesResponse)
                                     
                                     self.pageOf = self.pageOf + 10
