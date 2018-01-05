@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		845EF27E1FECFF69005112F1 /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EF27D1FECFF69005112F1 /* GoogleService.swift */; };
+		8465C43B1FFF859E00489C6B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8465C4391FFF859D00489C6B /* SWRevealViewController.m */; };
+		8465C43E1FFF8E9F00489C6B /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8465C43D1FFF8E9F00489C6B /* SideBarTableViewController.swift */; };
+		8465C4411FFF956200489C6B /* Window1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8465C4401FFF956200489C6B /* Window1.swift */; };
+		8465C4431FFF956F00489C6B /* Window2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8465C4421FFF956F00489C6B /* Window2.swift */; };
 		846628A31FEBCC4A00384B55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846628A21FEBCC4A00384B55 /* AppDelegate.swift */; };
 		846628A81FEBCC4A00384B55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846628A61FEBCC4A00384B55 /* Main.storyboard */; };
 		846628AA1FEBCC4A00384B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846628A91FEBCC4A00384B55 /* Assets.xcassets */; };
@@ -25,6 +29,12 @@
 /* Begin PBXFileReference section */
 		60266FA8EF81CECA55D13835 /* Pods-GoogleAPIClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleAPIClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleAPIClient/Pods-GoogleAPIClient.release.xcconfig"; sourceTree = "<group>"; };
 		845EF27D1FECFF69005112F1 /* GoogleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleService.swift; sourceTree = "<group>"; };
+		8465C4381FFF859B00489C6B /* GoogleAPIClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleAPIClient-Bridging-Header.h"; sourceTree = "<group>"; };
+		8465C4391FFF859D00489C6B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		8465C43A1FFF859E00489C6B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		8465C43D1FFF8E9F00489C6B /* SideBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
+		8465C4401FFF956200489C6B /* Window1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window1.swift; sourceTree = "<group>"; };
+		8465C4421FFF956F00489C6B /* Window2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window2.swift; sourceTree = "<group>"; };
 		8466289F1FEBCC4A00384B55 /* GoogleAPIClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleAPIClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846628A21FEBCC4A00384B55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846628A71FEBCC4A00384B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +74,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8465C43C1FFF8E7600489C6B /* SideBarMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8465C43D1FFF8E9F00489C6B /* SideBarTableViewController.swift */,
+			);
+			path = SideBarMenu;
+			sourceTree = "<group>";
+		};
+		8465C43F1FFF954C00489C6B /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				8465C4401FFF956200489C6B /* Window1.swift */,
+				8465C4421FFF956F00489C6B /* Window2.swift */,
+			);
+			path = Windows;
+			sourceTree = "<group>";
+		};
 		846628961FEBCC4A00384B55 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +112,8 @@
 		846628A11FEBCC4A00384B55 /* GoogleAPIClient */ = {
 			isa = PBXGroup;
 			children = (
+				8465C43F1FFF954C00489C6B /* Windows */,
+				8465C43C1FFF8E7600489C6B /* SideBarMenu */,
 				848BF1451FF0C2EB00CB6083 /* Models */,
 				848EAF911FFF42CA00FD8D29 /* Collection */,
 				845EF27D1FECFF69005112F1 /* GoogleService.swift */,
@@ -105,7 +134,10 @@
 		848BF1431FF0BE3800CB6083 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8465C43A1FFF859E00489C6B /* SWRevealViewController.h */,
+				8465C4391FFF859D00489C6B /* SWRevealViewController.m */,
 				848BF1441FF0BEA000CB6083 /* .gitignore */,
+				8465C4381FFF859B00489C6B /* GoogleAPIClient-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -171,6 +203,7 @@
 				TargetAttributes = {
 					8466289E1FEBCC4A00384B55 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -274,14 +307,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				848EAF971FFF446300FD8D29 /* GoogleCollectionViewController.swift in Sources */,
+				8465C4411FFF956200489C6B /* Window1.swift in Sources */,
 				846628B51FEBCE6A00384B55 /* GoogleTableViewController.swift in Sources */,
 				846628B71FEBCE9900384B55 /* GoogleTableViewCell.swift in Sources */,
 				84698C911FF3AEFA009F433C /* SearchViewController.swift in Sources */,
 				845EF27E1FECFF69005112F1 /* GoogleService.swift in Sources */,
 				848BF1471FF0C33E00CB6083 /* ImagesResponse.swift in Sources */,
+				8465C4431FFF956F00489C6B /* Window2.swift in Sources */,
 				848EAF931FFF437000FD8D29 /* GoogleCollectionViewCell.swift in Sources */,
+				8465C43B1FFF859E00489C6B /* SWRevealViewController.m in Sources */,
 				846628BB1FEBD66C00384B55 /* GoogleImageDetailViewController.swift in Sources */,
 				846628A31FEBCC4A00384B55 /* AppDelegate.swift in Sources */,
+				8465C43E1FFF8E9F00489C6B /* SideBarTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,11 +456,14 @@
 			baseConfigurationReference = 89EABB6051E9DD310523E72E /* Pods-GoogleAPIClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GoogleAPIClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-0.GoogleAPIClient";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleAPIClient/Supporting Files/GoogleAPIClient-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -434,11 +474,13 @@
 			baseConfigurationReference = 60266FA8EF81CECA55D13835 /* Pods-GoogleAPIClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GoogleAPIClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-0.GoogleAPIClient";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleAPIClient/Supporting Files/GoogleAPIClient-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
