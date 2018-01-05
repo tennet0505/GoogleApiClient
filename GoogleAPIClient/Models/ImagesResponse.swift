@@ -27,8 +27,6 @@ class Item: Mappable {
     startIndex:String?,
     nextPage:Int?
   
-    
-    
     required init?(map: Map) { }
     func mapping(map: Map) {
         title <- map["title"]
@@ -40,7 +38,7 @@ class Item: Mappable {
     
     
     //getters
-    var thumbnailLink:String?{
+    var thumbnailLink: String?{
         return image?.thumbnailLink
     }
     

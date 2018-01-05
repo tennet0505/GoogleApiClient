@@ -38,6 +38,7 @@ class GoogleTableViewController: UITableViewController, UISearchBarDelegate, UIS
                                 print(Error)
         }
         )
+        
         self.tableView.reloadData()
 
         // MARK InfifnityScroll

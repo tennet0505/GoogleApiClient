@@ -44,7 +44,19 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <segue destination="qvX-4w-EfZ" kind="show" id="Ep8-Ea-OLs"/>
+                                                <segue destination="qvX-4w-EfZ" kind="show" identifier="TableViewSegue" id="Ep8-Ea-OLs"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2n-Yh-V32">
+                                            <rect key="frame" x="95" y="170" width="130" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <state key="normal" title="Collection">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="gAc-Dl-qEX" kind="show" identifier="CollectionViewSegue" id="NDv-kx-iml"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -96,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pZi-SK-Qfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448.80000000000001" y="396.25187406296857"/>
+            <point key="canvasLocation" x="448.125" y="396.12676056338029"/>
         </scene>
         <!--Google Table View Controller-->
         <scene sceneID="iUh-WN-N4H">
@@ -154,12 +166,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3o-4E-Wcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1185" y="-133.09859154929578"/>
+            <point key="canvasLocation" x="1268" y="788"/>
         </scene>
         <!--Google Image Detail View Controller-->
         <scene sceneID="1xq-u8-Ubo">
             <objects>
-                <viewController id="IXH-3l-uB3" customClass="GoogleImageDetailViewController" customModule="GoogleAPIClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GoogleImageDetailViewController" id="IXH-3l-uB3" customClass="GoogleImageDetailViewController" customModule="GoogleAPIClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T6Q-Ml-0Aj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,12 +196,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jl6-CM-FzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2124" y="-134"/>
+            <point key="canvasLocation" x="2006" y="787"/>
         </scene>
         <!--Google-->
         <scene sceneID="1Xs-LU-MPf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1fL-ma-zYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController title="Google" automaticallyAdjustsScrollViewInsets="NO" id="RnK-nO-YhG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="search" id="FCH-1f-Zm9"/>
                     <toolbarItems/>
@@ -207,8 +218,9 @@
                         <segue destination="oBw-nR-evo" kind="relationship" relationship="rootViewController" id="dL0-Dp-61J"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1fL-ma-zYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-350" y="397"/>
+            <point key="canvasLocation" x="-291" y="396"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="t0h-8U-zxQ">
@@ -216,25 +228,78 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="psq-uB-nc9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fta-2m-yRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="RnK-nO-YhG" kind="relationship" relationship="viewControllers" id="G8B-r1-Hdc"/>
                         <segue destination="qvX-4w-EfZ" kind="relationship" relationship="viewControllers" id="7s6-zh-u24"/>
-                        <segue destination="IXH-3l-uB3" kind="relationship" relationship="viewControllers" id="Cau-b8-qvE"/>
+                        <segue destination="gAc-Dl-qEX" kind="relationship" relationship="viewControllers" id="OKa-ZU-NiV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JlT-aZ-bVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1119" y="-132"/>
+            <point key="canvasLocation" x="-1153" y="396"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="n58-iu-J4v">
+            <objects>
+                <collectionViewController id="gAc-Dl-qEX" customClass="GoogleCollectionViewController" customModule="GoogleAPIClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="I34-XB-IRr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lem-sH-uSb">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCell" id="9al-Mf-VHk" customClass="GoogleCollectionViewCell" customModule="GoogleAPIClient" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Usb-aC-JNW">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="120" id="RXK-2U-dSa"/>
+                                                <constraint firstAttribute="width" constant="120" id="lNi-eC-Dfp"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Usb-aC-JNW" firstAttribute="centerX" secondItem="9al-Mf-VHk" secondAttribute="centerX" id="KCN-rm-mjP"/>
+                                    <constraint firstItem="Usb-aC-JNW" firstAttribute="centerY" secondItem="9al-Mf-VHk" secondAttribute="centerY" id="cQC-0P-VnA"/>
+                                </constraints>
+                                <size key="customSize" width="120" height="120"/>
+                                <connections>
+                                    <outlet property="imageCollection" destination="Usb-aC-JNW" id="Uvb-ge-YF9"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="gAc-Dl-qEX" id="MEK-Uo-bZe"/>
+                            <outlet property="delegate" destination="gAc-Dl-qEX" id="xMj-mL-svM"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" id="oM5-pV-ppr"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Erf-iI-kUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1268" y="79"/>
         </scene>
     </scenes>
     <resources>
         <image name="BackImg" width="1920" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AN5-IE-h5X"/>
+        <segue reference="NDv-kx-iml"/>
         <segue reference="Ep8-Ea-OLs"/>
     </inferredMetricsTieBreakers>
 </document>

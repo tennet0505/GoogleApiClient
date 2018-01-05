@@ -17,6 +17,8 @@
 		846628BB1FEBD66C00384B55 /* GoogleImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846628BA1FEBD66C00384B55 /* GoogleImageDetailViewController.swift */; };
 		84698C911FF3AEFA009F433C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84698C901FF3AEFA009F433C /* SearchViewController.swift */; };
 		848BF1471FF0C33E00CB6083 /* ImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BF1461FF0C33E00CB6083 /* ImagesResponse.swift */; };
+		848EAF931FFF437000FD8D29 /* GoogleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EAF921FFF436F00FD8D29 /* GoogleCollectionViewCell.swift */; };
+		848EAF971FFF446300FD8D29 /* GoogleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EAF961FFF446300FD8D29 /* GoogleCollectionViewController.swift */; };
 		AC234ECDFD3796DDA9B32514 /* Pods_GoogleAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03EF50F0AC01F9FC5503A0F /* Pods_GoogleAPIClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		84698C901FF3AEFA009F433C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		848BF1441FF0BEA000CB6083 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		848BF1461FF0C33E00CB6083 /* ImagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesResponse.swift; sourceTree = "<group>"; };
+		848EAF921FFF436F00FD8D29 /* GoogleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCollectionViewCell.swift; sourceTree = "<group>"; };
+		848EAF961FFF446300FD8D29 /* GoogleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCollectionViewController.swift; sourceTree = "<group>"; };
 		89EABB6051E9DD310523E72E /* Pods-GoogleAPIClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleAPIClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleAPIClient/Pods-GoogleAPIClient.debug.xcconfig"; sourceTree = "<group>"; };
 		D03EF50F0AC01F9FC5503A0F /* Pods_GoogleAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				848BF1451FF0C2EB00CB6083 /* Models */,
+				848EAF911FFF42CA00FD8D29 /* Collection */,
 				845EF27D1FECFF69005112F1 /* GoogleService.swift */,
 				84698C901FF3AEFA009F433C /* SearchViewController.swift */,
 				846628B41FEBCE6A00384B55 /* GoogleTableViewController.swift */,
@@ -111,6 +116,16 @@
 				848BF1461FF0C33E00CB6083 /* ImagesResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		848EAF911FFF42CA00FD8D29 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				848EAF921FFF436F00FD8D29 /* GoogleCollectionViewCell.swift */,
+				848EAF961FFF446300FD8D29 /* GoogleCollectionViewController.swift */,
+			);
+			name = Collection;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		95F0DB2AC7968C8FE8D38A6E /* Frameworks */ = {
@@ -258,11 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848EAF971FFF446300FD8D29 /* GoogleCollectionViewController.swift in Sources */,
 				846628B51FEBCE6A00384B55 /* GoogleTableViewController.swift in Sources */,
 				846628B71FEBCE9900384B55 /* GoogleTableViewCell.swift in Sources */,
 				84698C911FF3AEFA009F433C /* SearchViewController.swift in Sources */,
 				845EF27E1FECFF69005112F1 /* GoogleService.swift in Sources */,
 				848BF1471FF0C33E00CB6083 /* ImagesResponse.swift in Sources */,
+				848EAF931FFF437000FD8D29 /* GoogleCollectionViewCell.swift in Sources */,
 				846628BB1FEBD66C00384B55 /* GoogleImageDetailViewController.swift in Sources */,
 				846628A31FEBCC4A00384B55 /* AppDelegate.swift in Sources */,
 			);
