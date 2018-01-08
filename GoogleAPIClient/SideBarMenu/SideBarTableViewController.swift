@@ -33,6 +33,9 @@ class SideBarTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: sideBarMenu[indexPath.row], for: indexPath)
         
+    
+        
+        
         cell.textLabel?.text = sideBarMenu[indexPath.row]
         
         return cell

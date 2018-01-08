@@ -23,6 +23,8 @@
 		848BF1471FF0C33E00CB6083 /* ImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BF1461FF0C33E00CB6083 /* ImagesResponse.swift */; };
 		848EAF931FFF437000FD8D29 /* GoogleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EAF921FFF436F00FD8D29 /* GoogleCollectionViewCell.swift */; };
 		848EAF971FFF446300FD8D29 /* GoogleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EAF961FFF446300FD8D29 /* GoogleCollectionViewController.swift */; };
+		84E1457920037BE400886E79 /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E1457820037BE300886E79 /* CoreDataTableViewController.swift */; };
+		84E1457B20037F8200886E79 /* CoreDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E1457A20037F8200886E79 /* CoreDataTableViewCell.swift */; };
 		AC234ECDFD3796DDA9B32514 /* Pods_GoogleAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03EF50F0AC01F9FC5503A0F /* Pods_GoogleAPIClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		848BF1461FF0C33E00CB6083 /* ImagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesResponse.swift; sourceTree = "<group>"; };
 		848EAF921FFF436F00FD8D29 /* GoogleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCollectionViewCell.swift; sourceTree = "<group>"; };
 		848EAF961FFF446300FD8D29 /* GoogleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCollectionViewController.swift; sourceTree = "<group>"; };
+		84E1457820037BE300886E79 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
+		84E1457A20037F8200886E79 /* CoreDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewCell.swift; sourceTree = "<group>"; };
 		89EABB6051E9DD310523E72E /* Pods-GoogleAPIClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleAPIClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleAPIClient/Pods-GoogleAPIClient.debug.xcconfig"; sourceTree = "<group>"; };
 		D03EF50F0AC01F9FC5503A0F /* Pods_GoogleAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,6 +116,7 @@
 		846628A11FEBCC4A00384B55 /* GoogleAPIClient */ = {
 			isa = PBXGroup;
 			children = (
+				84E1457720037B7700886E79 /* CoreData */,
 				8465C43F1FFF954C00489C6B /* Windows */,
 				8465C43C1FFF8E7600489C6B /* SideBarMenu */,
 				848BF1451FF0C2EB00CB6083 /* Models */,
@@ -158,6 +163,15 @@
 			);
 			name = Collection;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		84E1457720037B7700886E79 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				84E1457820037BE300886E79 /* CoreDataTableViewController.swift */,
+				84E1457A20037F8200886E79 /* CoreDataTableViewCell.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		95F0DB2AC7968C8FE8D38A6E /* Frameworks */ = {
@@ -306,11 +320,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E1457920037BE400886E79 /* CoreDataTableViewController.swift in Sources */,
 				848EAF971FFF446300FD8D29 /* GoogleCollectionViewController.swift in Sources */,
 				8465C4411FFF956200489C6B /* Window1.swift in Sources */,
 				846628B51FEBCE6A00384B55 /* GoogleTableViewController.swift in Sources */,
 				846628B71FEBCE9900384B55 /* GoogleTableViewCell.swift in Sources */,
 				84698C911FF3AEFA009F433C /* SearchViewController.swift in Sources */,
+				84E1457B20037F8200886E79 /* CoreDataTableViewCell.swift in Sources */,
 				845EF27E1FECFF69005112F1 /* GoogleService.swift in Sources */,
 				848BF1471FF0C33E00CB6083 /* ImagesResponse.swift in Sources */,
 				8465C4431FFF956F00489C6B /* Window2.swift in Sources */,

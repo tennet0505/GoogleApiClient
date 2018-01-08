@@ -41,18 +41,18 @@ class SearchViewController: UIViewController {
             dvc1.searhString1 = searchTextField.text!
             
         }
+        if segue.identifier == "CoreDataSegue" {
+            
+            let dvc2 = segue.destination as! CoreDataTableViewController
+            
+            dvc2.labelData = searchTextField.text!
         
         
         
     }
     
-    
-    
-    
-
-    
-
-    
     }
+    
+}
         
 
