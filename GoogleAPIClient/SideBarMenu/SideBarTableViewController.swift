@@ -15,7 +15,7 @@ class SideBarTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        sideBarMenu = ["Home","Window1","Window2"]
+        sideBarMenu = ["Home","Google","Yandex"]
      
     }
 
